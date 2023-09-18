@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Grades</title>
+  </head>
+  <body>
+    <table>
+      <tr>
+        <td valign="top" style="padding-right: 120px" >
+          <ul>
+            <li><a href="#">Account</a></li>
+            <li><a href="#">Dashboard</a></li>
+            <li><a href="#">Courses</a></li>
+            <li><a href="#">Calendar</a></li>
+            <li><a href="#">Inbox</a></li>
+            <li><a href="#">History</a></li>
+            <li><a href="#">Studio</a></li>
+            <li><a href="#">Commons</a></li>
+            <li><a href="#">Help</a></li>
+          </ul>
+        </td>
+        <td valign="top" style="padding-right: 100px">
+          <ul>
+            <li><a href="home.html">Home</a></li>
+            <li><a href="#">Modules</a></li>
+            <li><a href="#">Piazza</a></li>
+            <li><a href="#">Zoom Meetings</a></li>
+            <li><a href="./assignments/index.html">Assignments</a></li>
+            <li><a href="#">Quizzes</a></li>
+            <li><a href="grades.html">Grades</a></li>
+            <li><a href="#">People</a></li>
+            <li><a href="#">Panopto Video</a></li>
+            <li><a href="#">Discussions</a></li>
+            <li><a href="#">Announcements</a></li>
+            <li><a href="#">Pages</a></li>
+            <li><a href="#">Files</a></li>
+            <li><a href="#">Rubrics</a></li>
+            <li><a href="#">Outcomes</a></li>
+            <li><a href="#">Collaborations</a></li>
+            <li><a href="#">Syllabus</a></li>
+            <li><a href="./settings/courseDetails.html">Settings</a></li>
+          </ul>
+        </td>
+        <td valign="top" style="padding-top: 20px" width="100%">
+          <select>
+            <option>Gradebook</option>
+            <option>option2</option>
+          </select>
+          <button type="button">Import</button>
+          <select>
+            <option>Export</option>
+            <option>option2</option>
+          </select>
+          <button type="button">Configure</button><br />
+          <label for="studentNames"><h3>Student Names</h3></label>
+          <input id="studentNames" type="text" placeholder="Search Students" />
+          <label for="assignmentNames"><h3>Assignment Names</h3></label>
+          <input
+            id="assignmentNames"
+            type="text"
+            placeholder="Search Assignments"
+          /><br /><br />
+          <button type="button">Apply Filters</button><br /><br />
+          <table border="1" width="100%">
+            <thead>
+              <tr>
+                <th>Student Name</th>
+                <th>A1 SETUP<br />Out of 100</th>
+                <th>A2 HTML<br />Out of 100</th>
+                <th>A3 CSS<br />Out of 100</th>
+                <th>A4 Bootstrap<br />Out of 100</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Alice</td>
+                <td align="center">98</td>
+                <td align="center">89</td>
+                <td align="center">87</td>
+                <td align="center"><input type="text" style="text-align:center; width:30px" value="90"/></td>
+              </tr>
+              <tr>
+                <td>Leia</td>
+                <td align="center">78</td>
+                <td align="center"><input type="text" style="text-align:center; width:30px" value="82"/></td>
+                <td align="center">89</td>
+                <td align="center">92</td>
+              </tr>
+              <tr>
+                <td>Luke</td>
+                <td align="center">83</td>
+                <td align="center">90</td>
+                <td align="center">92</td>
+                <td align="center">81</td>
+              </tr>
+              <tr>
+                <td>Han Solo</td>
+                <td align="center">76</td>
+                <td align="center">89</td>
+                <td align="center"><input type="text" style="text-align:center; width:30px" value="88"/></td>
+                <td align="center">83</td>
+              </tr>
+            </tbody>
+          </table>
+        </td>
+      </tr>
+    </table>
+  </body>
+</html>
