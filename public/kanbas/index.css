@@ -1,0 +1,62 @@
+/* sidebar black*/
+
+.wd-nav-sidebar {
+  flex: none;
+  width: 85px;
+  height: 100%;
+  position: fixed;
+}
+
+.wd-nav-sidebar-list .list-group-item {
+  padding: 10px;
+  width: 85px;
+  text-decoration: none;
+  background-color: black;
+  border: none;
+  text-align: center;
+}
+
+.wd-nav-sidebar-list .list-group-item a {
+  color: white;
+  font-size: 12px;
+  text-decoration: none;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.wd-nav-sidebar-list .list-group-item i {
+  color: red;
+  font-size: 27px;
+}
+
+.list-group.wd-nav-sidebar-list {
+  display: flex;
+  flex-direction: column;
+  padding-left: 0;
+  margin-bottom: 0;
+  border-radius: 0;
+}
+
+.wd-nav-sidebar-list .list-group-item.account-icon i {
+  color: grey;
+}
+
+ul.wd-nav-sidebar-list .list-group-item .active {
+  background-color: white;
+  border-right: 1px solid black;
+
+}
+
+ul.wd-nav-sidebar-list .list-group-item.active a {
+  color: red;
+}
+
+ul.wd-nav-sidebar-list .list-group-item.active i {
+  color: red;
+}
+
+/*********/
+
+
+
+
+

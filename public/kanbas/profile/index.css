@@ -1,0 +1,83 @@
+.sidebar-margin{
+    padding-left: 150px;
+    padding-top: 30px;
+}
+
+.icon-heading{
+    display: flex; 
+    align-items: center;
+}
+
+.icon-heading i{
+    padding-right: 20px;
+    margin-right: 20px;
+    color:red;
+}
+
+.wd-acc-nav{
+    margin-left: -33px;
+    margin-top: 5px;
+}
+
+  
+.wd-acc-nav-list .list-group-item {
+    width: 200px;
+    text-decoration: none;
+    border: none;
+    padding: 10px 0 10px 0;
+  }
+  
+  .wd-acc-nav-list .list-group-item a {
+    color: red;
+    font-size: 14px;
+    text-decoration: none;
+    font-family: Arial, Helvetica, sans-serif;
+    margin-left: 25px;
+    padding: 10px;
+  }
+  
+  .list-group.wd-acc-nav-list {
+    display: flex;
+    flex-direction: column;
+    border-radius: 0;
+  }
+  
+  .wd-acc-nav-list .list-group-item.active {
+    background-color: white;
+  }
+  
+  .wd-acc-nav-list .list-group-item.active a {
+    color: black;
+    border-left: 1px solid black;
+  }
+
+  .wd-profile-picture {
+  
+    font-size: 170px;
+    padding: 20px;
+  }
+  
+  .wd-profile a {
+    color: red;
+    text-decoration: none;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+  
+  .wd-profile i {
+    padding: 5px;    
+  }
+  
+  .kanbas-section {
+    padding-top: 6px;    
+    padding-bottom: 10px;    
+  }
+  
+  .wd-profile-edit-section{
+    padding-top: 6px;    
+    padding-bottom: 10px; 
+  }
+  
+  
+  .wd-arrow-div {
+    margin-top: 30px; 
+  }
