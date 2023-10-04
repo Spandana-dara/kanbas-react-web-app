@@ -1,0 +1,23 @@
+.margin-r{
+    margin-right: 15px;
+}
+
+.margin-l{
+    margin-left: -20px;
+}
+
+.margin-t{
+    margin-top: 15px;
+}
+
+.margin-b{
+    margin-bottom: 15px;
+}
+
+.table td{
+ text-align: center;
+}
+
+/* .list-group-item i{
+    margin-left: 30px;
+} */
