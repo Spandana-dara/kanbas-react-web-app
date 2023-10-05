@@ -125,4 +125,181 @@ ul.wd-nav-sidebar-list .list-group-item.active i {
     color: red;
 }
 
+/* sidebar */
+
+div.col.wd-nav-sidebar {
+  flex: none;
+  width: 85px;
+  height: 100vh;
+  
+  
+  
+}
+
+div.row>*.wd-nav-sidebar {
+  padding-right: 0;
+  padding-left: 0;
+}
+
+ul.wd-nav-sidebar-list .list-group-item {
+  
+  padding: 10px;
+  width: 85px;
+  text-decoration: none;
+  background-color: black;
+  border: none;
+  text-align: center;
+
+}
+
+ul.wd-nav-sidebar-list .list-group-item a {
+  color: white;
+  font-size: 12px;
+  text-decoration: none;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+ul.wd-nav-sidebar-list .list-group-item i {
+  color: red;
+  font-size: 27px;
+}
+
+ul.list-group.wd-nav-sidebar-list {
+  display: flex;
+  flex-direction: column;
+  padding-left: 0;
+  margin-bottom: 0;
+  border-radius: 0;
+}
+
+ul.wd-nav-sidebar-list .list-group-item.account-icon i {
+  color: grey;
+}
+
+ul.wd-nav-sidebar-list .list-group-item.active {
+  background-color: white;
+  border-right: 1px solid black;
+
+}
+
+ul.wd-nav-sidebar-list .list-group-item.active a {
+  color: red;
+}
+
+ul.wd-nav-sidebar-list .list-group-item.active i {
+  color: red;
+}
+
+
+.wd-header-expand{
+  display: flex;
+  padding-left: 3%;
+  margin-right: 10px;
+}
+
+.wd-header-icon{
+  color: red;
+  margin-right: 25px;
+}
+
+.wd-kanbas-breadcrumbs{
+  color: red;
+  text-decoration: none;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+
+i.wd-profile-picture {
+  
+  font-size: 170px;
+  padding: 20px;
+}
+
+div.col.wd-profile a {
+  color: red;
+  text-decoration: none;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+div.col.wd-profile i {
+  padding: 5px;    
+}
+
+div.kanbas-section {
+  padding-top: 6px;    
+  padding-bottom: 10px;    
+}
+
+
+
+div.col.wd-acc-nav {
+  flex: none;
+  width: 200px;
+  
+}
+
+div.row>*.wd-acc-nav {
+  padding-right: 0;
+  padding-left: 0;
+}
+
+ul.wd-acc-nav-list .list-group-item {
+  width: 200px;
+  text-decoration: none;
+  border: none;
+  padding: 10px;
+}
+
+ul.wd-acc-nav-list .list-group-item a {
+  color: red;
+  font-size: 14px;
+  text-decoration: none;
+  font-family: Arial, Helvetica, sans-serif;
+  margin-left: 25px;
+  padding: 10px;
+}
+
+ul.list-group.wd-acc-nav-list {
+  display: flex;
+  flex-direction: column;
+  border-radius: 0;
+}
+
+ul.wd-acc-nav-list .list-group-item.active {
+  background-color: white;
+}
+
+ul.wd-acc-nav-list .list-group-item.active a {
+  color: black;
+  border-left: 1px solid black;
+}
+
+
+.wd-profile-edit-section{
+  padding-top: 6px;    
+  padding-bottom: 10px; 
+}
+
+
+.wd-arrow-div {
+  margin-top: 30px; 
+}
+
+.icon-heading{
+  display: flex; 
+  align-items: center;
+}
+
+.icon-heading i{
+  padding-right: 20px;
+  margin-right: 20px;
+  color:red;
+}
+.sidebar-margin{
+  padding-left: 150px;
+  padding-top: 30px;
+}
+
+
+
 

@@ -1,0 +1,45 @@
+.wd-kanbas-breadcrumbs{
+    color: red;
+    text-decoration: none;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.wd-color-green{
+    color: green;
+    
+}
+
+.wd-color-red{
+    color: red;
+}
+
+.wd-home-list-header{
+    display: flex;
+    align-items: center;
+}
+
+div.col.wd-home-list i {
+    padding: 5px;
+}
+
+i.wd-home-list-green {
+    padding: 5px;
+    color: green;
+}
+
+div.col.wd-home-list a {
+    color: #000;
+    text-decoration: none;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+div.col.wd-home-list-red a {
+    color: red;
+    text-decoration: none;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.icon-heading button i{
+    color: white;
+    
+}
