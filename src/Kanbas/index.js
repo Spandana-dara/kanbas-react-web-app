@@ -1,9 +1,12 @@
-function Kanbas() {
-    return(
-        <div>
-            <h1>Kanbas</h1>
-        </div>
-    )
-}
+import {Link} from "react-router-dom";
+import Nav from "../Labs/a3/Nav";
 
-export default Kanbas;
+function Kanbas() {
+ return(
+  <div>
+   <Nav/>
+   <h1>Kanbas</h1>
+  </div>
+ )
+}
+export default Kanbas
