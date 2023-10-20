@@ -1,0 +1,50 @@
+.wd-dashboard-header{
+    font-size: 2rem;
+    color: grey;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.wd-dashboard-pubcou{
+    margin-left: 15px;
+    font-size: 1.5rem;
+    color: rgba(28, 25, 25, 0.756);
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+
+.wd-custom-card {
+    padding-left: 20px;
+    padding-right: 20px;
+    max-width: 100%; 
+    max-height: 100%;
+    width: auto; 
+    height: auto;
+}
+
+
+
+div.wd-dashboard a {
+    color: #000;
+    text-decoration: none;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.wd-card-course-title{
+    color:rgb(3, 133, 172);
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 14px;
+}
+
+.wd-card-course-code{
+color: rgba(75, 72, 72, 0.76);
+font-family: Arial, Helvetica, sans-serif;
+
+
+}
+
+.wd-card-sem{
+font-size: small;
+display: block;
+margin-top: -4px;
+margin-bottom: -20px;
+}

@@ -1,0 +1,10 @@
+.grade-header {
+    display: flex;
+    justify-content: space-between;
+    margin: 10px 0px 20px 0px;
+
+}
+
+.grade-buttons > button{
+    margin-right: 6px;
+}

@@ -1,0 +1,27 @@
+.collapsible .content {
+    margin-left: 20px;
+    margin:10px;
+}
+
+.collapsible .header {
+    display: flex;
+    background-color: #f5f5f5;
+    padding: 15px 10px 15px 10px;
+    align-items: center;
+    cursor: pointer;
+
+}
+
+.collapsible {
+    border: 1px solid #c7cdd1;
+    margin: 10px;
+}
+
+.module-lesson {
+    border-top: 1px solid #c7cdd1;
+    padding: 16px;
+}
+
+.lesson-list {
+    margin-top: 16px;
+}

@@ -1,0 +1,19 @@
+.mainContent {
+    width: calc(98vw - 80px);
+    left: 80px;
+    position: relative;
+    margin:10px;
+
+}
+
+.content {
+    overflow: hidden;
+}
+
+.btn-secondary {
+    color: #2d3b45 !important;
+      background: #f5f5f5 !important;
+      border-radius: 3px !important;
+      border-color: #c7cdd1 !important;
+      font-family: "Lato Extended","Lato","Helvetica Neue",Helvetica,Arial,sans-serif !important;
+}

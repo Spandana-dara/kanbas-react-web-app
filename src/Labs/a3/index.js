@@ -1,7 +1,7 @@
 import Classes from "./Classes";
 import ConditionalOutput from "./ConditionalOutput.js";
 import DynamicStyling from "./DynamicStyling";
-import Javascript from "./Javascript";
+import JavascriptFunctions from "./JavascriptFunctions";
 import PathParameters from "./PathParameters";
 import Styles from "./Styles";
 import TodoItem from "./todo/TodoItem";
@@ -16,7 +16,7 @@ function Assignment3() {
       <ConditionalOutput/>
       <Styles/>
       <Classes/>
-      <Javascript />
+      <JavascriptFunctions />
       <PathParameters/>
       <DynamicStyling/>
     </div>

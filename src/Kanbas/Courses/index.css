@@ -1,0 +1,20 @@
+.course-heading{
+    display: flex; 
+    align-items: center;
+    font-size: 24px;
+    margin-left: 16px;
+}
+
+.course-name {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 24px;
+    color: red;
+}
+
+.course-name h6 {
+    font-size: 24px;
+    padding: 0;
+    margin: 0;
+}
