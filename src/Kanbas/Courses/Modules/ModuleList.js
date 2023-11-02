@@ -4,37 +4,50 @@ import db from "../../Database";
 import CollapsibleComponent from "./CollapsibleComponent";
 import "./index.css";
 import { useState } from "react";
+import { useSelector, useDispatch } from "react-redux";
+import {
+  addModule,
+  deleteModule,
+  updateModule,
+  setModule,
+} from "./moduleReducer";
 
 function ModuleList() {
   const { courseId } = useParams();
-  const [modules, setModules] = useState(db.modules);
-  const [module, setModule] = useState({
-    name: "New Module",
-    description: "New Description",
-    course: courseId,
-  });
+  const modules = useSelector((state) => state.modulesReducer.modules);
+  const module = useSelector((state) => state.modulesReducer.module);
+  const dispatch = useDispatch();
+
 
   return (
-    <ul className="list-group">
+    <ul className="list-group col-8">
       <li className="list-group-item">
         <div className="mb-3 row">
-          <div className="col col-2">
+          <div className="col col-3">
             <input
               value={module.name}
-              onChange={(e) => setModule({ ...module, name: e.target.value })}
+              onChange={(e) => dispatch(setModule({ ...module, name: e.target.value }))}
               className="form-control"
               placeholder="Module Name"
             />
           </div>
-          <div className="col">
-            <button className="btn btn-success">Add</button>
+          <div className="ms-4 col">
+            <button
+              className="btn btn-success"
+              onClick={() => dispatch(addModule({...module, course:courseId}))}
+            >
+              Add
+            </button>
+            <button className="ms-2 btn btn-primary" onClick={()=>dispatch(updateModule(module))}>
+              Update
+            </button>
           </div>
         </div>
         <div className="mb-3 col-3">
           <textarea
             value={module.description}
             onChange={(e) =>
-              setModule({ ...module, description: e.target.value })
+              dispatch(setModule({ ...module, description: e.target.value }))
             }
             className="form-control"
             placeholder="Module Description"
@@ -43,7 +56,7 @@ function ModuleList() {
         </div>
       </li>
 
-      {modules
+      {/* {modules
         .filter((module) => module.course === courseId)
         .map((module, index) => (
           <CollapsibleComponent module={module}>
@@ -51,6 +64,7 @@ function ModuleList() {
               <ul className="list-group lesson-list">
                 {module.lessons.map((lesson, index) => (
                   <div className="module-lesson">
+                    
                     <p>{lesson.name}</p>
                     <p>{lesson.description}</p>
                   </div>
@@ -58,6 +72,33 @@ function ModuleList() {
               </ul>
             )}
           </CollapsibleComponent>
+        ))} */}
+      {modules
+        .filter((module) => module.course === courseId)
+        .map((module, index) => (
+          <li key={index} className="list-group-item">
+            <div className="row">
+              <div className="col">
+                <h3>{module.name}</h3>
+                <p>{module.description}</p>
+                <p>{module._id}</p>
+              </div>
+              <div className="col">
+                <button
+                  className="btn btn-success me-2"
+                  onClick={()=>dispatch(setModule(module))}
+                >
+                  Edit
+                </button>
+                <button
+                  className="btn btn-danger"
+                  onClick={() => dispatch(deleteModule(module._id))}
+                >
+                  Delete
+                </button>
+              </div>
+            </div>
+          </li>
         ))}
     </ul>
   );

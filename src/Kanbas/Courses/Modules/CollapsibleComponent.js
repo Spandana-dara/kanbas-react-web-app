@@ -14,6 +14,7 @@ function CollapsibleComponent(props) {
       </div>
       <div {...getCollapseProps()}>
         <div>
+          
           <div className="content">{props.module.description}</div>
           {props.children}
         </div>
