@@ -8,6 +8,7 @@ import { useState, useEffect } from "react";
 import store from "./store";
 import { Provider } from "react-redux";
 import axios from "axios";
+import Signin from "./Users/signin";
 
 function Kanbas() {
   const [courses, setCourses] = useState([]);
@@ -17,7 +18,7 @@ function Kanbas() {
     startDate: "2023-09-10",
     endDate: "2023-12-15",
   });
-  const API_BASE = process.env.REACT_APP_API_BASE;
+  const API_BASE = "http://localhost:4000/api";
   const URL = `${API_BASE}/courses`;
   const findAllCourses = async () => {
     const response = await axios.get(URL);
@@ -81,6 +82,7 @@ function Kanbas() {
               element={<Courses courses={courses} />}
             />
             <Route path="Calendar" element={<h1>Calendar</h1>} />
+            <Route path="/signin" element={<Signin/>}/>
           </Routes>
         </div>
       </div>
