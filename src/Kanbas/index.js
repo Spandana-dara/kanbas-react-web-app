@@ -9,6 +9,8 @@ import store from "./store";
 import { Provider } from "react-redux";
 import axios from "axios";
 import Signin from "./Users/signin";
+import UserTable from "./Users/table";
+import Signup from "./Users/signup";
 
 function Kanbas() {
   const [courses, setCourses] = useState([]);
@@ -83,7 +85,9 @@ function Kanbas() {
             />
             <Route path="Calendar" element={<h1>Calendar</h1>} />
             <Route path="/signin" element={<Signin/>}/>
+            <Route path="/signup" element={<Signup/>}/>
             <Route path="/account" element={<Account/>}/>
+            <Route path="/table" element={<UserTable />} />
           </Routes>
         </div>
       </div>
