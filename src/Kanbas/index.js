@@ -1,7 +1,7 @@
 import { Route, Routes, Navigate } from "react-router";
 import KanbasNavigation from "./KanbasNavigation";
 import Courses from "./Courses";
-import Account from "./Account";
+import Account from "./Users/account";
 import Dashboard from "./Dashboard";
 import db from "./Database";
 import { useState, useEffect } from "react";
@@ -83,6 +83,7 @@ function Kanbas() {
             />
             <Route path="Calendar" element={<h1>Calendar</h1>} />
             <Route path="/signin" element={<Signin/>}/>
+            <Route path="/account" element={<Account/>}/>
           </Routes>
         </div>
       </div>
