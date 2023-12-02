@@ -9,6 +9,11 @@ function Account() {
     const account = await client.account();
     setAccount(account);
   };
+  const signout = async () => {
+    await client.signout();
+    navigate("/kanbas/signin");
+  };
+
   useEffect(() => {
     fetchAccount();
   }, []);
@@ -56,6 +61,7 @@ function Account() {
             <option value="STUDENT">Student</option>
           </select>
           <button onClick={save}>Save</button>
+          <button onClick={signout}>Signout</button>
           <Link to="/kanbas/table" className="btn btn-warning w-100">
             Users
           </Link>
