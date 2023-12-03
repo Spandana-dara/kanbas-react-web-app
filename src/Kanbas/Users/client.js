@@ -7,6 +7,8 @@ export const signin = async (credentials) => {
 };
 export const account = async () => {
   const response = await axios.post(`${USERS_API}/account`);
+  console.log("account")
+  console.log(response.data)
   return response.data;
 };
 export const updateUser = async (user) => {
