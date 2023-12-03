@@ -20,7 +20,8 @@ function Kanbas() {
     startDate: "2023-09-10",
     endDate: "2023-12-15",
   });
-  const API_BASE = "http://localhost:4000/api";
+  // const API_BASE = "http://localhost:4000/api";
+  const API_BASE = process.env.REACT_APP_API_BASE;
   const URL = `${API_BASE}/courses`;
   const findAllCourses = async () => {
     const response = await axios.get(URL);
