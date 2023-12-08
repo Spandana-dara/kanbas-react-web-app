@@ -16,10 +16,16 @@
     padding: 15px 10px 15px 10px;
     align-items: center;
     cursor: pointer;
+}
+
+.assignmentCell {
     border-bottom: 1px solid #c7cdd1;
 }
 
-
+.assignmentDeleteButton {
+    align-self: center;
+    padding: 10px;
+}
 
 .assg-collapsible {
     border: 1px solid #c7cdd1;
@@ -49,4 +55,37 @@
 
 .assg-buttons>button {
     margin-right: 6px;
+}
+
+.assignmentCell {
+    display: flex;
+    justify-content: space-between;
+}
+
+.assignmentForm input {
+    margin-bottom: 16px;   
+}
+
+.assignmentForm textarea {
+    margin-bottom: 16px;   
+}
+
+.assignmentForm label {
+    font-weight: bold;
+    margin-bottom: 8px;
+    --bs-text-opacity: 1;
+    color: var(--bs-secondary-color)!important;
+}
+
+
+.assignBox {
+    border: 1px solid #c7cdd1;
+    padding: 16px;
+    margin-bottom: 16px;
+}
+
+.assignCell {
+    display: flex;
+    align-items: center;
+    gap: 30px;
 }

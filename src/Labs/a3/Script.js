@@ -12,7 +12,7 @@ import Spread from "./Spread";
 import Destructing from "./Destructing";
 import FunctionDestructing from "./FunctionDestructing";
 
-function JavascriptFunctions() {
+function Script() {
   console.log("Hello World!");
   return (
     <div>
@@ -33,4 +33,4 @@ function JavascriptFunctions() {
   );
 }
 
-export default JavascriptFunctions;
+export default Script;

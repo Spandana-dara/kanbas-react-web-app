@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import {
   useParams,
   Routes,
@@ -7,7 +7,6 @@ import {
   useLocation,
 } from "react-router-dom";
 import { AiOutlineMenu, AiOutlineRight } from "react-icons/ai";
-import db from "../Database";
 import CourseNavigation from "./CourseNavigation";
 import Modules from "./Modules";
 import Home from "./Home";
@@ -15,20 +14,16 @@ import Assignments from "./Assignments";
 import AssignmentEditor from "./Assignments/AssignmentEditor";
 import Grades from "./Grades";
 import "./index.css";
-import { useState, useEffect } from "react";
 import axios from "axios";
-
+import { BACKEND_BASE_URL } from "../../envVariables";
 function Courses() {
   const { courseId } = useParams();
   const { pathname } = useLocation();
-  const [empty, kanbas, _courses, id, screen] = pathname.split("/");
-  // const API_BASE = "http://localhost:4000/api";
-  const API_BASE = process.env.REACT_APP_API_BASE;
-  const URL = `${API_BASE}/api/courses`;
+  const [, , , , screen] = pathname.split("/");
   const [course, setCourse] = useState({});
   const findCourseById = async (courseId) => {
     const response = await axios.get(
-      `${URL}/${courseId}`
+      `${BACKEND_BASE_URL}/courses/${courseId}`
     );
     setCourse(response.data);
   };
@@ -36,6 +31,7 @@ function Courses() {
   useEffect(() => {
     findCourseById(courseId);
   }, [courseId]);
+
 
   return (
     <div>

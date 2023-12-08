@@ -1,31 +1,27 @@
 import axios from "axios";
-export const BASE_API = process.env.REACT_APP_BASE_API;
-export const USERS_API = `${BASE_API}/api/users`;
-
+import { BACKEND_BASE_URL } from "../../envVariables";
+export const USERS_API = `${BACKEND_BASE_URL}/users`;
 const request = axios.create({
   withCredentials: true,
 });
 
-
 export const signin = async (credentials) => {
-  const response = await request.post(`${USERS_API}/signin`, credentials);
+  const response = await request.post( `${USERS_API}/signin`, credentials );
   return response.data;
 };
+
 export const account = async () => {
   const response = await request.post(`${USERS_API}/account`);
-  console.log("account")
-  console.log(response.data)
   return response.data;
 };
+
 export const updateUser = async (user) => {
-  console.log(user)
   const response = await request.put(`${USERS_API}/${user._id}`, user);
   return response.data;
 };
 
 export const findAllUsers = async () => {
   const response = await request.get(`${USERS_API}`);
-  console.log(response.data)
   return response.data;
 };
 
@@ -55,7 +51,5 @@ export const signout = async () => {
   const response = await request.post(`${USERS_API}/signout`);
   return response.data;
 };
-
-
 
 

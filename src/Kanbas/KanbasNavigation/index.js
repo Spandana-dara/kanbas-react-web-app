@@ -26,7 +26,6 @@ function KanbasNavigation() {
     <div className="list-group wd-kanbas-navigation sidebar">
       <Link
         key="Neu_Logo"
-        to={links[1]}
         className="list-group-item"
         style={{ marginTop: 10 }}
       >

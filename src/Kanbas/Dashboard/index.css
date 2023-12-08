@@ -21,8 +21,35 @@
     height: auto;
 }
 
+.editOptions button {
+    margin-right: 16px;
+}
+.addOptions {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 16px 16px 16px;
+}
+.addOptions button {
+    margin-right: 16px;
+}
+.course {
+    display: flex;
+    padding: 10px;
+    border: 1px solid #c7cdd1;
+    justify-content: space-between;
+    align-items: center;
+    margin: 10px 0 10px 0;
+}
 
+.courseForm {
+    border: 1px solid #c7cdd1;
+    align-items: center;
+}
 
+.courseForm input {
+    margin-top: 8px;   
+}
 div.wd-dashboard a {
     color: #000;
     text-decoration: none;
@@ -47,8 +74,4 @@ font-size: small;
 display: block;
 margin-top: -4px;
 margin-bottom: -20px;
-}
-
-.input-style{
-    width: '50%';
 }

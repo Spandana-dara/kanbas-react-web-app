@@ -9,7 +9,7 @@
     padding: 15px 10px 15px 10px;
     align-items: center;
     cursor: pointer;
-
+    justify-content: space-between;
 }
 
 .collapsible {
@@ -24,4 +24,30 @@
 
 .lesson-list {
     margin-top: 16px;
+}
+
+.module-editOptions button {
+    margin-right: 16px;
+}
+
+.module-addOptions {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 16px 16px 16px;
+}
+.module-addOptions button {
+    margin-right: 16px;
+}
+
+.moduleForm {
+    align-items: center;
+}
+
+.moduleForm input {
+    margin-top: 8px;   
+}
+
+.moduleForm textarea {
+    margin-top: 8px;   
 }

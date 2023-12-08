@@ -1,20 +1,38 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { Link, useParams } from "react-router-dom";
-import db from "../../Database";
-import { useCollapse } from "react-collapsed";
 import "./index.css";
 import { AiOutlineHolder, AiOutlinePlus } from "react-icons/ai";
 import { FaCaretRight } from "react-icons/fa6";
 import { FaRegPenToSquare } from "react-icons/fa6";
 import { FaEllipsisVertical } from "react-icons/fa6";
+import { useDispatch, useSelector } from "react-redux";
+import { deleteAssignment, setAssignments } from "./assignmentsReducer";
+import * as client from "./client";
 
 function Assignments() {
   const { courseId } = useParams();
-  const assignments = db.assignments;
+  const dispatch = useDispatch();
+  const assignments = useSelector((state) => state.assignmentReducer.assignments);
   const courseAssignments = assignments.filter(
     (assignment) => assignment.course === courseId,
   );
-  const { getCollapseProps, getToggleProps, isExpanded } = useCollapse();
+  useEffect(() => {
+    client.findAssignmentsForCourse(courseId)
+      .then((assignments) =>
+        dispatch(setAssignments(assignments))
+    );
+  }, [courseId]);
+
+  const handleDelete = (assignmentId) => {
+    const result = window.confirm('Do you want to delete this assignment');
+    if(result) {
+      client.deleteAssignment(assignmentId)
+            .then((status)=>{
+              dispatch(deleteAssignment(assignmentId))
+            });
+    }
+  }
+
   return (
     <div>
       <div
@@ -36,9 +54,14 @@ function Assignments() {
             <button class="btn btn-secondary">
               <AiOutlinePlus /> Group
             </button>
-            <button class="btn btn-danger">
-              <AiOutlinePlus /> Assignment
-            </button>
+            <Link
+              key={"newAssignment"}
+              to={`/Kanbas/Courses/${courseId}/Assignments/newAssignment`}
+            >
+              <button class="btn btn-danger">
+                <AiOutlinePlus /> Assignment
+              </button>
+            </Link>
             <button class="btn btn-secondary">
               <FaEllipsisVertical></FaEllipsisVertical>
             </button>
@@ -47,35 +70,45 @@ function Assignments() {
       </div>
       <hr style={{ marginTop: 4 }} />
       <div className="assg-collapsible">
-        <div className="header" {...getToggleProps()}>
+        <div className="header">
           <AiOutlineHolder style={{ marginRight: 10 }}></AiOutlineHolder>
           <FaCaretRight style={{ marginRight: 10 }}></FaCaretRight>
           <h5>Assignments</h5>
         </div>
-        <div {...getCollapseProps()}>
+        <div>
           <div className="content">
             {courseAssignments.map((assignment) => (
-              <Link
-                key={assignment._id}
-                to={`/Kanbas/Courses/${courseId}/Assignments/${assignment._id}`}
-                className="list-group-item"
-              >
-                <div className="assignment" {...getToggleProps()}>
-                  <AiOutlineHolder
-                    style={{ marginRight: 20 }}
-                  ></AiOutlineHolder>
-                  <FaRegPenToSquare
-                    style={{ marginRight: 20 }}
-                  ></FaRegPenToSquare>
-                  <div className="assg-title">
-                    <h5>{assignment.title}</h5>
-                    <p>
-                      <span style={{ color: "red" }}>Multiple Modules</span> |
-                      Due Oct 4 at 11:59pm | 100 pts
-                    </p>
+
+              <div className="assignmentCell">
+                <Link
+
+                  key={assignment._id}
+                  to={`/Kanbas/Courses/${courseId}/Assignments/${assignment._id}`}
+                  className="list-group-item"
+                >
+                  <div className="assignment" >
+                    <AiOutlineHolder
+                      style={{ marginRight: 20 }}
+                    ></AiOutlineHolder>
+                    <FaRegPenToSquare
+                      style={{ marginRight: 20 }}
+                    ></FaRegPenToSquare>
+                    <div className="assg-title">
+                      <h5>{assignment.title}</h5>
+                      <p>
+                        <span style={{ color: "red" }}>Multiple Modules</span> |
+                        {" "+assignment.dueDate+" "} | 100 pts
+                      </p>
+                    </div>
                   </div>
+                </Link>
+                <div className="assignmentDeleteButton">
+                  <button
+                    onClick={() => handleDelete(assignment._id)} type="button" class="btn btn-danger">
+                    Delete
+                  </button>
                 </div>
-              </Link>
+              </div>
             ))}
           </div>
         </div>
